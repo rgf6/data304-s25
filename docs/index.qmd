@@ -1,0 +1,47 @@
+---
+title: "Website!"
+format: html
+embed-resources: true
+---
+
+## Homework 5
+
+#### Exercise 1
+
+a\. <https://www.reddit.com/r/dataisbeautiful/?rdt=50044>
+
+![](images/clipboard-2212157523.png)
+
+b\. This graphic uses points, lines, and an image. The silk road outposts are mapped to points, travel routes are mapped to lines, and whether the foundation has visited the outpost/route is mapped to color.
+
+c\. This graphic shows the history of the silk road. It shows the known outposts and routes as well as those that have been visited/not visited by the foundation.
+
+d\. This is a good graphic because it is well laid out and easy to read. The points and lines are colored as well which makes it easier to follow. It is also organized, which Wilke states as one of the most important parts of a graphic/visualization.
+
+e\. I could implement the points, lines, and colors.
+
+f\. I would not know how to implement the map or how to map the points and lines to certain points on the map.
+
+#### Exercise 2
+
+```{r}
+library(vegabrite)
+
+vl_chart() |>
+  vl_mark_bar() |>
+  vl_encode_x("weather:N") |>
+  vl_encode_y("month:Q") |>
+  vl_add_data(url = "https://calvin-data304.netlify.app/data/weather-with-dates.csv")
+```
+
+## Homework 6
+
+#### Exercise 1
+
+a\. A graphical display should "induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production, or something else."
+
+b\. I chose the graphic on page 35
+
+## Section 2
+
+And fun!!!
