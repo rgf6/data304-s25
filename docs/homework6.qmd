@@ -1,0 +1,60 @@
+---
+title: "Homework 6"
+author: "Riley Farmer"
+format: html
+editor: visual
+---
+
+## Exercise 1
+
+a\. Graphics should allow the viewer to think about the substance of the graphics rather than the methodology, design, technology, etc. Also, a graphic cannot save bad data.
+
+b\. I chose the graphic on page 15 about solar radiation and stock prices. I chose this graphic because, although it does not utilize much color or fancy encoding, it shows the data very well and makes it easy to understand the story behind it. This graphic utilizes lines and labeling. It graphs month to the x-axis, calories per square centimeter per minute on one y-axis and the place of the stock prices on the other y-axis, and graphs all three lines (New York stock prices, London stock prices, and solar radiation) in one facet. I'm not sure I would know how to graph both y-axes. The point of this graphic is to show the changes of stock prices (in both London and New York) as the solar radiation changes and how these could possibly be correlated.
+
+## Exercise 2
+
+Bar charts must have a zero baseline due to how our eyes perceive the ends of the bars. Always answer the "so what?" question. Don't assume that your audience knows the data like you do...always present the data in the easiest way possible to understand.
+
+## Exercise 3
+
+```{r}
+library(vegawidget)
+library(jsonlite)
+
+vega_spec <- list(
+  `$schema` = "https://vega.github.io/schema/vega-lite/v5.json",
+  data = list(
+    values = list(
+      list(Date = "Q1-2017", Completion_Rate = 0.91, Response_Rate = 0.023),
+      list(Date = "Q2-2017", Completion_Rate = 0.93, Response_Rate = 0.018),
+      list(Date = "Q3-2017", Completion_Rate = 0.91, Response_Rate = 0.028),
+      list(Date = "Q4-2017", Completion_Rate = 0.89, Response_Rate = 0.023),
+      list(Date = "Q1-2018", Completion_Rate = 0.84, Response_Rate = 0.034),
+      list(Date = "Q2-2018", Completion_Rate = 0.88, Response_Rate = 0.027),
+      list(Date = "Q3-2018", Completion_Rate = 0.91, Response_Rate = 0.026),
+      list(Date = "Q4-2018", Completion_Rate = 0.87, Response_Rate = 0.039),
+      list(Date = "Q1-2019", Completion_Rate = 0.83, Response_Rate = 0.028)
+    )
+  ),
+  layer = list(
+    list(
+      mark = list(type = "line", color = "#1f77b4"),
+      encoding = list(
+        x = list(field = "Date", type = "ordinal", title = "Quarter"),
+        y = list(field = "Completion_Rate", type = "quantitative", title = "Completion Rate", axis = list(titleColor = "#1f77b4"))
+      )
+    ),
+    list(
+      mark = list(type = "bar", color = "#ff7f0e"),
+      encoding = list(
+        x = list(field = "Date", type = "ordinal"),
+        y = list(field = "Response_Rate", type = "quantitative", title = "Response Rate", axis = list(titleColor = "#ff7f0e"))
+      )
+    )
+  )
+)
+
+vegawidget(vega_spec)
+```
+
+I have resized the graph so that it is scaled correctly.

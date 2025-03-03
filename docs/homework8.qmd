@@ -1,0 +1,64 @@
+---
+title: "Homework 8"
+format: html
+editor: visual
+---
+
+## Exercise 1
+
+```{r}
+library(vegabrite)
+
+cap_dem_url <- "https://calvin-data304.netlify.app/data/swd-lets-practice-ex-2-3.csv"
+
+vl_chart() |>
+  vl_mark_bar() |>
+  vl_encode_x("date:T") |>
+  vl_encode_y("capacity:Q") |>
+  vl_add_data(cap_dem_url)
+```
+
+```{r}
+vl_chart() |>
+  vl_mark_line() |>
+  vl_encode_x("date:O") |>
+  vl_encode_y("capacity:Q") |>
+  vl_encode_y2("demand:Q") |>
+  vl_add_data(cap_dem_url)
+```
+
+## Exercise 2
+
+a\.
+
+```{r}
+library(vegabrite)
+jobs_url <- 
+  "https://cdn.jsdelivr.net/npm/vega-datasets@2.8.0/data/jobs.json"
+
+
+#| fig-cap: "This is a caption for the figure."
+vl_chart() |>
+  vl_mark_point() |>
+  vl_pivot("year", groupby = list("job", "sex"), value = "perc") |>
+  vl_encode_x("1850:Q") |>
+  vl_scale_x(type = "symlog", constant = 0.00001) |>  # note: scale must be set quite small
+  vl_encode_y("2000:Q") |>
+  vl_scale_y(type = "symlog", constant = 0.00001) |>  # note: scale must be set quite small
+  vl_facet_column("1850:Q", title = "") |>
+  vl_encode_tooltip_array(list("job", "sex", "1850", "2000")) |>
+  vl_add_properties(
+    title =  list( 
+      text = "Percent of people working various jobs",
+      subtitle = "Each dot represents the one occupation. Hover to see which occupation it is."
+      )) |>
+  vl_add_data_url(jobs_url) 
+```
+
+```{r}
+vl_chart() |>
+  vl_mark_bar() |>
+  vl_encode_x("year:T") |>
+  vl_encode_y("perc:Q") |>
+  vl_add_data(jobs_url)
+```

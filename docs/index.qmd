@@ -1,5 +1,6 @@
 ---
 title: "Website!"
+author: "Riley Farmer"
 format: html
 embed-resources: true
 ---
@@ -33,15 +34,3 @@ vl_chart() |>
   vl_encode_y("month:Q") |>
   vl_add_data(url = "https://calvin-data304.netlify.app/data/weather-with-dates.csv")
 ```
-
-## Homework 6
-
-#### Exercise 1
-
-a\. A graphical display should "induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production, or something else."
-
-b\. I chose the graphic on page 35
-
-## Section 2
-
-And fun!!!
