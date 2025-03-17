@@ -1,0 +1,80 @@
+---
+title: "Homework 7"
+format: html
+editor: visual
+---
+
+## Exercise 1
+
+a\. Be aware of labels, as bar plots usually take up a lot of horizontal space. In order to fix this probelm, you could use rotated labels (not the nest option) or swap the x and y-axis.
+
+b\. Wilke advises not to use bar charts when the nature of the data does not match with what a bar chart displays. A lot of times, bar charts are easier to create; however, it obscures the data and the story it is supposed to display.
+
+c\. Dot plots, heat maps, and box plots.
+
+d\. Stacked bars are best for showing part-to-whole relationships while dodged bars are best for showing relationships across groups.
+
+e\.
+
+```{r}
+library(vegabrite)
+
+vl_chart() |>
+  vl_mark_bar() |>
+  vl_encode_x ("amount:Q", title = "Weekend Gross") |>
+  vl_encode_y("title:N", title = "") |>
+  vl_add_data(url="https://calvin-data304.netlify.app/data/cow-movies.csv")
+```
+
+f\.
+
+```{r}
+vl_chart() |>
+  vl_mark_bar() |>
+  vl_encode_x("race:N") |>
+  vl_encode_y("median_in:Q") |>
+  vl_encode_color("age:O") |>
+  vl_add_data(url = "https://calvin-data304.netlify.app/data/cow-income.csv")
+```
+
+```{r}
+vl_chart() |>
+  vl_mark_bar() |>
+  vl_encode_x("age:N") |>
+  vl_encode_y("median_in:Q") |>
+  vl_facet("race:N") |>
+  vl_add_data(url="https://calvin-data304.netlify.app/data/cow-income.csv")
+```
+
+g\.
+
+```{r}
+vl_chart() |>
+  vl_mark_point() |>
+  vl_encode_x("lifeExp:Q") |>
+  vl_encode_y("country:N") |>
+  vl_add_data(url="https://calvin-data304.netlify.app/data/cow-gapminder.csv")
+```
+
+## Exercise 2
+
+b\.
+
+## Exercise 3
+
+a\. Mapping data values onto colors rather than mapping them onto positions.
+
+b\.
+
+```{r}
+vl_chart() |>
+  vl_mark_rect() |>
+  vl_encode_x("year:O") |>
+  vl_encode_y("country:N") |>
+  vl_encode_color("users:Q") |>
+  vl_add_data(url="https://calvin-data304.netlify.app/data/cow-internet2.csv")
+```
+
+c\.
+
+d\.

@@ -1,0 +1,15 @@
+---
+title: "Homework 9"
+format: html
+editor: visual
+---
+
+## Exercise 1
+
+a\. Color is used to distinguish groups that don't have a discrete order. A sequential color scale can be used to represent data values. A diverging color scale is used to visualize the deviation of data values in two directions relative to a neutral midpoint.
+
+b\. Wilke groups these graphics by the type of data being visualized.
+
+c\. I don't think I would be able to create an overlapping density plot, but I would be very interested in learning how to create this, as it would be very helpful in my statistics classes and can show many different distributions in one graphic.
+
+## Exercise 2

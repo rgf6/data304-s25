@@ -37,8 +37,10 @@ vl_chart() |>
 
 Homework 6: <https://r.cs.calvin.edu/s/2005d185dc9de3434f7fb/files/data304-s25/docs/homework6.html>
 
-Homework 7:
+Homework 7: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/Homework%207.html>
 
-Homework 8:
+Homework 8: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/homework8.html>
 
-Homework 9:
+Homework 9: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/Homework%209.html>
+
+Portfolio: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/Portfolio.html>

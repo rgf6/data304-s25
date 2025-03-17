@@ -1,0 +1,94 @@
+---
+title: "Portfolio"
+format: html
+editor: visual
+---
+
+## Exercise 1
+
+a\. I like Daniel's graphic that compares twins because I think it displays the data very well and he utilizes color very well.
+
+b\. I am not a huge fan of Lily's graphic that compares twins because the scaling is way off, so you cannot tell exactly what it is supposed to be showing.
+
+c\.
+
+```{r}
+library(vegabrite)
+
+vl_chart(title=) |>
+  vl_mark_point() |>
+  vl_encode_x("twin:N", title="Genetic Share") |>
+  vl_encode_y("genetic share:Q", title="Twin Pairs") |>
+  vl_encode_color("region:N") |>
+  vl_add_data(url="https://calvin-data304.netlify.app/data/twins-genetics-long.json")
+```
+
+This graphic shows the genetic share between all six sets of twins and how that compares to the region the twins are from.
+
+```{r}
+vl_chart() |>
+  vl_mark_point() |>
+  vl_encode_x("genetic share:Q") |>
+  vl_encode_y("kit:N") |>
+  vl_add_data(url="https://calvin-data304.netlify.app/data/twins-genetics-long.json")
+```
+
+This graphic shows the genetic share between twins based on the kit that was used to calculate the genetic share.
+
+## Exercise 2
+
+```{r}
+base <- vl_chart() |>
+  vl_mark_line(point=TRUE) |>
+  vl_encode_x("Date:O") |>
+  vl_add_data(url="https://calvin-data304.netlify.app/data/swd-lets-practice-ex-2-13.json")
+
+completion <- base |>
+  vl_encode_y("Completion Rate:Q") |>
+  vl_encode_color(datum = "Completion", type = "nominal")
+
+response <- 
+  base |>
+  vl_encode_y("Response Rate:Q") |>
+  vl_encode_color(datum = "Response", type = "nominal")
+
+completion + response
+```
+
+## Exercise 3
+
+a\.
+
+```{r}
+data <- "/mnt/data/tanzania_dhs_survey_split.json"
+```
+
+b\.
+
+```{r}
+vl_chart() |>
+  vl_mark_line(point=TRUE) |>
+  vl_encode_x("Modern_Contraception_Use:Q") |>
+  vl_encode_y("Unmet_Need_For_Family_Planning:Q") |>
+  vl_encode_color("Total_Fertility_Rate:Q") |>
+  vl_facet("DHS_Survey_Year:T") |>
+  vl_add_data(url="/mnt/data/tanzania_dhs_survey_split.json")
+```
+
+## Exercise 5
+
+a\. I encoded a color channel in almost all of the graphics I created
+
+b\. I layered my graphic for exercise 2 in order to get both completion and response rates.
+
+c\. I faceted my graphic in exercise 3 for each year.
+
+d\. I also used concatenation for exercise 2 where I layered.
+
+e\. I changed the settings for exercise 2.
+
+## Exercise 6
+
+a\. In all of my graphics, I personalized the titles and sorted things differently.
+
+b\. In exercise 2, I made sure the colors were pleasing for the vieweer, which was discussed in Wilke Chapter 4.
