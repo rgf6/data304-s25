@@ -35,12 +35,12 @@ vl_chart() |>
   vl_add_data(url = "https://calvin-data304.netlify.app/data/weather-with-dates.csv")
 ```
 
-Homework 6: <https://r.cs.calvin.edu/s/2005d185dc9de3434f7fb/files/data304-s25/docs/homework6.html>
+Homework 6: <https://rgf6.github.io/data304-s25/homework6.html>
 
-Homework 7: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/Homework%207.html>
+Homework 7: [https://rgf6.github.io/data304-s25/homework7.html](https://rgf6.github.io/data304-s25/homework6.html)
 
-Homework 8: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/homework8.html>
+Homework 8: [https://rgf6.github.io/data304-s25/homework8.html](https://rgf6.github.io/data304-s25/homework6.html)
 
-Homework 9: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/Homework%209.html>
+Homework 9: [https://rgf6.github.io/data304-s25/homework9.html](https://rgf6.github.io/data304-s25/homework6.html)
 
-Portfolio: <https://r.cs.calvin.edu/s/2005d185dc9de8bce4c3d/files/data304-s25/docs/Portfolio.html>
+Portfolio: [https://rgf6.github.io/data304-s25/Portfolio.html](https://rgf6.github.io/data304-s25/homework6.html)
